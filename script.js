@@ -3,17 +3,7 @@ const employess = [{"id":1,"name":"John Smith","age":35,"contact":"+1 555-1234",
 				   {"id":16,"name":"Erica Chen","age":28,"contact":"+1 555-6789","zip":"10016"}]
 
 
-const fetchEmployeeAge = async()=>{
-	try{
-		const resp = await fetch(employess);
-		const data = await resp.json();
+employees.sort((a, b) => a.age - b.age);
 
-		data.sort((a,b)=> a.age - b.age);
 
-		console.log(data);
-	}catch(err);
-
-	console.log(err);
-}
-
-fetchEmployeeAge();
+console.log(employees);
